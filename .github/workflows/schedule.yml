@@ -53,8 +53,8 @@ jobs:
       if: steps.git-status.outputs.changed == 'true'
       run: |
         echo start push
-        git config --global user.name "s1xu"
-        git config --global user.email "s1xu@foxmail.com"
+        git config --global user.name "kyrxie"
+        git config --global user.email "zach12188@gmail.com"
         git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git add -A
         git commit -m "upd: $(date '+%Y-%m-%d') trending"
