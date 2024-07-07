@@ -56,6 +56,7 @@ func main() {
 func fetchDataAndProcess(languages []string, resultsChan chan map[string][]model.Message) {
 	defer close(resultsChan)
 
+	log.Printf("languages to process: %v", languages)
 	for _, lang := range languages {
 		results, err := helper.GetLanguageData(lang)
 		if err != nil {
